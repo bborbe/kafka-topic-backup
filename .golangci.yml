@@ -1,0 +1,122 @@
+version: "2"
+
+run:
+  timeout: 5m
+  tests: true
+
+linters:
+  enable:
+    # Core (enabled now)
+    - govet
+    - errcheck
+    - staticcheck
+    - depguard
+
+    # Core (enable when ready - Phase 1)
+    # - unused
+    # - revive
+    # - gosec
+    # - gocyclo
+    # - dupl
+
+    # SRP & maintainability (enable when ready - Phase 2)
+    # - funlen
+    # - gocognit
+    # - nestif
+    # - maintidx
+
+    # Readability & style (enable when ready - Phase 3)
+    # - errname
+    # - unparam
+
+    # Safety / defensive coding (enable when ready - Phase 4)
+    # - bodyclose
+    # - forcetypeassert
+    # - asasalint
+    # - prealloc
+  settings:
+    errcheck:
+      exclude-functions:
+        - (io.Closer).Close
+        - (io.Writer).Write
+        - fmt.Fprint
+        - fmt.Fprintf
+        - fmt.Fprintln
+
+    depguard:
+      rules:
+        Main:
+          deny:
+            - pkg: "sigs.k8s.io/structured-merge-diff/v4"
+              desc: "use sigs.k8s.io/structured-merge-diff/v6 instead"
+            - pkg: "github.com/pkg/errors"
+              desc: "use github.com/bborbe/errors instead"
+            - pkg: "github.com/bborbe/argument"
+              desc: "use github.com/bborbe/argument/v2 instead"
+            - pkg: "golang.org/x/net/context"
+              desc: "use context from standard library instead"
+            - pkg: "golang.org/x/lint/golint"
+              desc: "deprecated, use revive or staticcheck instead"
+            - pkg: "io/ioutil"
+              desc: "deprecated since Go 1.16, use io and os packages instead"
+
+    # Settings for when you enable these linters
+    funlen:
+      lines: 80
+      statements: 50
+
+    gocognit:
+      min-complexity: 20
+
+    nestif:
+      min-complexity: 4
+
+    maintidx:
+      min-maintainability-index: 20
+  exclusions:
+    presets:
+      - comments
+      - std-error-handling
+      - common-false-positives
+    rules:
+      - linters:
+          - staticcheck
+        text: "SA1019"
+      - linters:
+          - revive
+        path: "_test\\.go$"
+        text: "dot-imports"
+      - linters:
+          - revive
+        text: "unused-parameter"
+      - linters:
+          - revive
+        text: "exported"
+      - linters:
+          - dupl
+        path: "_test\\.go$"
+      - linters:
+          - errcheck
+        path: "_test\\.go$"
+      - linters:
+          - unparam
+        path: "_test\\.go$"
+      - linters:
+          - staticcheck
+        text: "ST1012"
+      - linters:
+          - staticcheck
+        text: "ST1001"
+        path: "(_test\\.go$|/test/)"
+      - linters:
+          - staticcheck
+        text: "S1002"
+      - linters:
+          - staticcheck
+        text: "QF1011"
+        path: "_test\\.go$"
+
+formatters:
+  enable:
+    - gofmt
+    - goimports

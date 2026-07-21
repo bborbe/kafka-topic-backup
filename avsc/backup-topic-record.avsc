@@ -1,0 +1,57 @@
+[
+    {
+        "fields": [
+            {
+                "name": "Key",
+                "type": "bytes"
+            },
+            {
+                "name": "Value",
+                "type": "bytes"
+            }
+        ],
+        "name": "BackupTopicRecordHeader",
+        "type": "record"
+    },
+    {
+        "fields": [
+            {
+                "name": "Key",
+                "type": "bytes"
+            },
+            {
+                "name": "Value",
+                "type": "bytes"
+            },
+            {
+                "name": "Headers",
+                "type": {
+                    "items": "BackupTopicRecordHeader",
+                    "type": "array"
+                }
+            },
+            {
+                "name": "Timestamp",
+                "type": "long"
+            },
+            {
+                "name": "BlockTimestamp",
+                "type": "long"
+            },
+            {
+                "name": "Topic",
+                "type": "string"
+            },
+            {
+                "name": "Partition",
+                "type": "int"
+            },
+            {
+                "name": "Offset",
+                "type": "long"
+            }
+        ],
+        "name": "BackupTopicRecord",
+        "type": "record"
+    }
+]

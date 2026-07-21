@@ -1,0 +1,22 @@
+{
+	"fields": [
+	   {
+			"name": "Topic",
+			"type": "string"
+		},
+	   {
+			"name": "ConsumerGroup",
+			"type": "string"
+		},
+		{
+			"name": "Partition",
+			"type": "int"
+		},
+		{
+			"name": "Offset",
+			"type": "long"
+		}
+	],
+	"name": "BackupTopicConsumerGroupOffset",
+	"type": "record"
+}
