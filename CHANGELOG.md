@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards compatible manner, and
 * PATCH version when you make backwards compatible bug fixes.
 
+## Unreleased
+
+- docs: add a License section to the README
+
 ## v0.1.0
 
 - Initial release — extracted from `bborbe/trading` (`strimzi/topic-backuper`) as a standalone public repo
