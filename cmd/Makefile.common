@@ -1,0 +1,26 @@
+# Shared configuration for the operator CLI tools in cmd/.
+#
+# In the trading monorepo these Makefiles pulled KAFKA_BROKERS and friends from
+# ../../../../{Makefile.variables,common.env,local.env}. Those includes did not
+# survive extraction, so the targets are defined here instead and the tools are
+# runnable straight from this repo.
+#
+# Override any value on the command line, e.g.
+#   make backup DATADIR=/Volumes/other WORKERS=4
+
+# Kafka is reached over the shared cluster's EXTERNAL nodeport listener, which is
+# routable from a laptop on the LAN. All three broker nodes are listed for
+# bootstrap redundancy. The monorepo's local.env pointed at 192.168.178.38 -- a
+# master, not a broker -- which worked only because the listener uses
+# externalTrafficPolicy=Cluster. These are the actual brokers.
+KAFKA_BROKERS ?= 192.168.178.41:32159,192.168.178.42:32159,192.168.178.43:32159
+
+# Backup store. Previously only cmd/backup defined this; cmd/cleaner and
+# cmd/restore referenced ${DATADIR} with nothing setting it, so they ran with
+# -datadir="". Defining it here fixes both.
+DATADIR ?= /Volumes/kafka-topic-backup
+
+# kubectlquant is a zsh function (~/.zsh/k8s.zsh), so targets that enumerate
+# KafkaTopics only work from an interactive zsh. Kafka still lives on the quant
+# cluster; revisit if it moves.
+KUBECTL_KAFKA ?= kubectlquant

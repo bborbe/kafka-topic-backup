@@ -8,6 +8,15 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards compatible manner, and
 * PATCH version when you make backwards compatible bug fixes.
 
+## Unreleased
+
+- feat: add self-contained Makefiles for the cmd/ operator tools (backup, cleaner, restore, scanner)
+- fix: define DATADIR for cmd/cleaner and cmd/restore, which previously ran with -datadir=""
+- fix: refuse `make backup` when the topic list resolves empty, instead of silently backing up nothing
+- fix: `make verify-backups` now fails when no partitions are found, instead of reporting "0/0 complete"
+- fix: guard jq-dependent targets with a clear error when jq is absent
+- fix: declare every cmd/ target .PHONY, so a stray file of the same name cannot silently no-op it
+
 ## v0.1.4
 
 - chore: update Go to 1.27.0 and update dependencies
