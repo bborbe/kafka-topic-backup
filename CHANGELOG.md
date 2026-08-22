@@ -8,6 +8,11 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards compatible manner, and
 * PATCH version when you make backwards compatible bug fixes.
 
+## Unreleased
+
+- feat: add self-contained Makefiles for the cmd/ operator tools (backup, cleaner, restore, scanner)
+- fix: define DATADIR for cmd/cleaner and cmd/restore, which previously ran with -datadir=""
+
 ## v0.1.4
 
 - chore: update Go to 1.27.0 and update dependencies
