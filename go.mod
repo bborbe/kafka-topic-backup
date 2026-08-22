@@ -1,19 +1,19 @@
 module github.com/bborbe/kafka-topic-backup
 
-go 1.26.6
+go 1.27.0
 
 require (
 	github.com/IBM/sarama v1.60.1
 	github.com/actgardner/gogen-avro/v9 v9.2.0
-	github.com/bborbe/errors v1.5.17
-	github.com/bborbe/http v1.26.20
-	github.com/bborbe/kafka v1.25.8
-	github.com/bborbe/log v1.6.22
-	github.com/bborbe/metrics v0.5.12
-	github.com/bborbe/run v1.9.34
-	github.com/bborbe/sentry v1.9.24
-	github.com/bborbe/service v1.10.8
-	github.com/bborbe/time v1.27.8
+	github.com/bborbe/errors v1.5.20
+	github.com/bborbe/http v1.26.23
+	github.com/bborbe/kafka v1.25.9
+	github.com/bborbe/log v1.6.23
+	github.com/bborbe/metrics v0.5.13
+	github.com/bborbe/run v1.9.37
+	github.com/bborbe/sentry v1.9.26
+	github.com/bborbe/service v1.10.9
+	github.com/bborbe/time v1.27.10
 	github.com/getsentry/sentry-go v0.48.0
 	github.com/golang/glog v1.2.5
 	github.com/gorilla/mux v1.8.1
@@ -24,12 +24,12 @@ require (
 
 require (
 	github.com/Masterminds/semver/v3 v3.5.0 // indirect
-	github.com/bborbe/argument/v2 v2.12.34 // indirect
-	github.com/bborbe/collection v1.20.20 // indirect
-	github.com/bborbe/kv v1.21.9 // indirect
-	github.com/bborbe/math v1.3.18 // indirect
-	github.com/bborbe/parse v1.10.19 // indirect
-	github.com/bborbe/validation v1.4.19 // indirect
+	github.com/bborbe/argument/v2 v2.12.36 // indirect
+	github.com/bborbe/collection v1.20.23 // indirect
+	github.com/bborbe/kv v1.21.11 // indirect
+	github.com/bborbe/math v1.3.21 // indirect
+	github.com/bborbe/parse v1.10.21 // indirect
+	github.com/bborbe/validation v1.4.21 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
@@ -47,7 +47,7 @@ require (
 	github.com/jcmturner/rpc/v2 v2.0.3 // indirect
 	github.com/klauspost/compress v1.19.2 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
-	github.com/pierrec/lz4/v4 v4.1.28 // indirect
+	github.com/pierrec/lz4/v4 v4.1.29 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/prometheus/client_model v0.6.2 // indirect
 	github.com/prometheus/common v0.70.1 // indirect
