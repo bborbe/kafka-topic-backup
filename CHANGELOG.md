@@ -15,6 +15,7 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 - fix: refuse `make backup` when the topic list resolves empty, instead of silently backing up nothing
 - fix: `make verify-backups` now fails when no partitions are found, instead of reporting "0/0 complete"
 - fix: guard jq-dependent targets with a clear error when jq is absent
+- fix: declare every cmd/ target .PHONY, so a stray file of the same name cannot silently no-op it
 
 ## v0.1.4
 

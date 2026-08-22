@@ -11,6 +11,7 @@ TOPIC        ?= develop-core-symbol-v1-event
 .PHONY: run
 run: restore
 
+.PHONY: restore
 restore:
 	@go run -mod=mod main.go \
 	-kafka-brokers="${KAFKA_BROKERS}" \
@@ -19,6 +20,7 @@ restore:
 	-datadir="${DATADIR}" \
 	-v=2
 
+.PHONY: list-topics
 list-topics:
 	@echo "Available topics in ${DATADIR}:"
 	@ls -1 "${DATADIR}" 2>/dev/null || echo "No backups found"
