@@ -9,7 +9,7 @@ TOPICS ?= $(shell $(KUBECTL_KAFKA) -n strimzi get kafkatopics.kafka.strimzi.io -
 # then looks like a clean run. Refuse instead.
 .PHONY: require-topics
 require-topics:
-	@if [ -z '$(TOPICS)' ]; then \
+	@if [ -z "$(TOPICS)" ]; then \
 		echo 'ERROR: no topics resolved from $(KUBECTL_KAFKA).' >&2; \
 		echo '  kubectlquant is a zsh function -- run this from an interactive zsh,' >&2; \
 		echo '  or pass the list explicitly: make backup TOPICS=a,b,c' >&2; \
@@ -23,7 +23,7 @@ require-jq:
 .PHONY: backup
 backup: require-topics
 	@echo "Backing up all topics with ${WORKERS} workers..."
-	@echo "Found $$(echo '${TOPICS}' | tr ',' '\n' | wc -l | tr -d ' ') topics"
+	@echo "Found $$(echo "$${TOPICS}" | tr ',' '\n' | wc -l | tr -d ' ') topics"
 	@go run -mod=mod main.go \
 		-kafka-brokers="${KAFKA_BROKERS}" \
 		-backup-topics="${TOPICS}" \

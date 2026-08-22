@@ -1,8 +1,10 @@
 include ../Makefile.common
 
-scan: TOPIC=develop-core-candle-v1-event
-scan: PARTITION=0
-scan: START_OFFSET=0
+TOPIC        ?= develop-core-candle-v1-event
+PARTITION    ?= 0
+START_OFFSET ?= 0
+
+.PHONY: scan
 scan:
 	@echo "=== Scanning ${TOPIC} from offset ${START_OFFSET} ==="
 	@go run -mod=mod main.go \
