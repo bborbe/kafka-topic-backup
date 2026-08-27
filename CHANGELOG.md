@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards compatible manner, and
 * PATCH version when you make backwards compatible bug fixes.
 
+## Unreleased
+
+- feat: opt into `autoMerge.trivial` for mechanically-trivial update PRs
+
 ## v0.2.0
 
 - feat: add self-contained Makefiles for the cmd/ operator tools (backup, cleaner, restore, scanner)
