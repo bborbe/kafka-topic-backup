@@ -8,6 +8,13 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards compatible manner, and
 * PATCH version when you make backwards compatible bug fixes.
 
+## Unreleased
+
+- ci: add ci.yml running `make precommit` -- the `test` required status check had no workflow producing it, permanently blocking every PR
+- chore: update golang.org/x/crypto to v0.56.0 (fixes GO-2026-6354, GO-2026-6355)
+
+- chore: update github.com/bborbe/errors to v1.6.0, github.com/bborbe/http to v1.26.25, github.com/bborbe/kafka to v1.25.10, github.com/bborbe/metrics to v0.6.0, github.com/bborbe/run to v1.10.1, github.com/bborbe/sentry to v1.10.0, github.com/bborbe/service to v1.10.10, github.com/bborbe/time to v1.27.11, github.com/getsentry/sentry-go to v0.49.0, github.com/onsi/gomega to v1.43.0
+
 ## v0.3.1
 
 - chore: update github.com/IBM/sarama to v1.60.2, github.com/bborbe/errors to v1.5.21, github.com/bborbe/http to v1.26.24, github.com/bborbe/log to v1.6.25, github.com/bborbe/metrics to v0.5.15, github.com/bborbe/sentry to v1.9.27
