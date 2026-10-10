@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards compatible manner, and
 * PATCH version when you make backwards compatible bug fixes.
 
+## Unreleased
+
+- chore: update github.com/IBM/sarama to v1.61.1, github.com/bborbe/kafka to v1.26.0, github.com/bborbe/log to v1.7.1, github.com/bborbe/run to v1.11.0, github.com/bborbe/service to v1.10.14, github.com/getsentry/sentry-go to v0.50.0, github.com/onsi/ginkgo/v2 to v2.33.0, github.com/onsi/gomega to v1.44.0, github.com/prometheus/client_golang to v1.25.0
+
 ## v0.3.4
 
 - chore: update github.com/bborbe/run to v1.10.3, github.com/bborbe/sentry to v1.10.2
