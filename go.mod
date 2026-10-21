@@ -1,17 +1,17 @@
 module github.com/bborbe/kafka-topic-backup
 
-go 1.27.2
+go 1.27.3
 
 require (
 	github.com/IBM/sarama v1.61.1
 	github.com/actgardner/gogen-avro/v9 v9.2.0
 	github.com/bborbe/errors v1.6.3
 	github.com/bborbe/http v1.26.30
-	github.com/bborbe/kafka v1.28.3
+	github.com/bborbe/kafka v1.28.4
 	github.com/bborbe/log v1.7.4
 	github.com/bborbe/metrics v0.6.7
 	github.com/bborbe/run v1.11.2
-	github.com/bborbe/sentry v1.10.4
+	github.com/bborbe/sentry v1.10.5
 	github.com/bborbe/service v1.11.0
 	github.com/bborbe/time v1.27.17
 	github.com/getsentry/sentry-go v0.50.0
