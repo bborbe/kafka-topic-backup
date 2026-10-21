@@ -8,7 +8,7 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards compatible manner, and
 * PATCH version when you make backwards compatible bug fixes.
 
-## Unreleased
+## v0.5.2
 
 - chore: update Go to 1.27.3 and github.com/bborbe/kafka to v1.28.4, github.com/bborbe/sentry to v1.10.5
 
