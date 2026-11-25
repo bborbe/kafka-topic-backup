@@ -1,2 +1,0 @@
-# golang.org/x/crypto/openpgp unmaintained (no fix will ship) — advisory deprecates the package.
-# Pulled transitively (kerberos/sentry); the openpgp path is not used by this service.
