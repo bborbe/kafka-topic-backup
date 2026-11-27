@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards compatible manner, and
 * PATCH version when you make backwards compatible bug fixes.
 
+## Unreleased
+
+- chore: update github.com/IBM/sarama to v1.62.0, github.com/bborbe/errors to v1.7.1, github.com/bborbe/http to v1.28.1, github.com/bborbe/kafka to v1.30.4, github.com/bborbe/log to v1.7.10, github.com/bborbe/metrics to v0.6.15, github.com/bborbe/run to v1.13.0, github.com/bborbe/sentry to v1.11.1, github.com/bborbe/service to v1.12.2, github.com/bborbe/time to v1.27.30
+
 ## v0.7.3
 
 - chore: remove orphaned section comments left in `.trivyignore` by the stale-ignore sweep
